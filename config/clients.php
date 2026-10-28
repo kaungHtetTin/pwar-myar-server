@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'landing_url' => env('LANDING_URL', 'https://www.pwarmyar.com'),
+    'landing_url' => env('LANDING_URL', 'https://pwarmyar.com'),
     'web_url' => env('MKPOS_WEB_URL', 'https://pos.pwarmyar.com'),
     'mobile_url' => env('MKPOS_MOBILE_URL', 'https://mobilepos.pwarmyar.com'),
     'office_url' => env('MKPOS_OFFICE_URL', 'https://office.pwarmyar.com'),

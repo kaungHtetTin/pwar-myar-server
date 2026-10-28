@@ -21,8 +21,8 @@ class OfficePortableAuthApiTest extends TestCase
         ]);
 
         $login = $this->withHeaders([
-            'Origin' => 'https://www.pwarmyar.com',
-            'Referer' => 'https://www.pwarmyar.com/public/office/',
+            'Origin' => 'https://pwarmyar.com',
+            'Referer' => 'https://pwarmyar.com/public/office/',
         ])->postJson('/api/office/auth/login', [
             'email' => 'production-office@example.com',
             'password' => 'password123',
@@ -44,8 +44,8 @@ class OfficePortableAuthApiTest extends TestCase
         ]);
 
         $login = $this->withHeaders([
-            'Origin' => 'https://www.pwarmyar.com',
-            'Referer' => 'https://www.pwarmyar.com/mkpos-office/',
+            'Origin' => 'https://pwarmyar.com',
+            'Referer' => 'https://pwarmyar.com/mkpos-office/',
             'X-MKPOS-Auth' => 'token',
             'X-MKPOS-Client' => 'office',
         ])->postJson('/api/office/auth/login', [

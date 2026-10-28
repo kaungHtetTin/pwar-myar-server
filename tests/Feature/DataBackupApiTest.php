@@ -101,7 +101,7 @@ class DataBackupApiTest extends TestCase
     public function test_portable_trial_requests_cannot_bypass_capability_enforcement(): void
     {
         $response = $this->withHeaders([
-            'Origin' => 'https://www.pwarmyar.com',
+            'Origin' => 'https://pwarmyar.com',
             'X-MKPOS-Auth' => 'token',
             'X-MKPOS-Client' => 'android',
         ])->postJson('/api/auth/register', [

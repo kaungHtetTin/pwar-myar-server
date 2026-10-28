@@ -134,8 +134,8 @@ class TrialRegistrationApiTest extends TestCase
     public function test_token_registration_returns_the_same_active_trial_contract(): void
     {
         $response = $this->withHeaders([
-            'Origin' => 'https://www.pwarmyar.com',
-            'Referer' => 'https://www.pwarmyar.com/web-mkpos/',
+            'Origin' => 'https://pwarmyar.com',
+            'Referer' => 'https://pwarmyar.com/web-mkpos/',
             'X-MKPOS-Auth' => 'token',
             'X-MKPOS-Client' => 'android',
         ])->postJson('/api/auth/register', $this->registrationPayload(
