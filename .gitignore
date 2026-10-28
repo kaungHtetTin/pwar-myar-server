@@ -23,11 +23,6 @@ yarn-error.log
 /.vscode
 
 # Generated frontend deployments and release/test artifacts
-/public/app/
-/public/mobile/
-/public/office/
-/public/shop/
-/shop/
 /artifacts/
 /test-artifacts/
 /coverage/
