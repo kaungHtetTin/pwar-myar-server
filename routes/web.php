@@ -28,8 +28,8 @@ Route::get('/downloads/{platform}', [DownloadController::class, 'show'])
     ->whereIn('platform', AppRelease::PLATFORMS)
     ->name('downloads.show');
 
-foreach (['app', 'mobile', 'office'] as $client) {
-    Route::get('/'.$client.'/{path?}', function (Request $request, string $path = '') use ($client) {
+foreach (['app' => 'app', 'pos' => 'app', 'mobile' => 'mobile', 'office' => 'office'] as $prefix => $client) {
+    Route::get('/'.$prefix.'/{path?}', function (Request $request, string $path = '') use ($client) {
         return redirect()->away(ClientApps::legacyUrl($client, $path, $request->getQueryString()), 302);
     })->where('path', '.*');
 }
@@ -42,8 +42,8 @@ Route::get('/shop/{path?}', function () {
 })->where('path', '.*');
 
 Route::get('/{path?}', function () {
-    $index = public_path('app/index.html');
+    $index = public_path('pos/index.html');
     abort_unless(is_file($index), 404, 'React build not found. Run npm run build:laravel in frontend.');
 
     return response()->file($index);
-})->where('path', '^(?!api(?:/|$)|app(?:/|$)|office(?:/|$)|mobile(?:/|$)|shop(?:/|$)).*');
+})->where('path', '^(?!api(?:/|$)|app(?:/|$)|pos(?:/|$)|office(?:/|$)|mobile(?:/|$)|shop(?:/|$)).*');

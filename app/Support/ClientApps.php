@@ -19,7 +19,7 @@ class ClientApps
 
     public static function webUrl(string $path = ''): string
     {
-        $base = config('clients.web_url') ?: url('/app').'/#';
+        $base = config('clients.web_url') ?: url('/pos').'/#';
 
         return rtrim($base, '/').'/'.ltrim($path, '/');
     }

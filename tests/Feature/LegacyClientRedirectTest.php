@@ -11,7 +11,7 @@ class LegacyClientRedirectTest extends TestCase
         config()->set('clients.web_url', null);
         config()->set('clients.mobile_url', null);
         config()->set('clients.office_url', null);
-        foreach (['app' => 'pos', 'mobile' => 'mobilepos', 'office' => 'office'] as $app => $host) {
+        foreach (['app' => 'pos', 'pos' => 'pos', 'mobile' => 'mobilepos', 'office' => 'office'] as $app => $host) {
             $this->get('/'.$app)->assertStatus(302)->assertRedirect('https://'.$host.'.pwarmyar.com/');
             $this->get('/'.$app.'/')->assertRedirect('https://'.$host.'.pwarmyar.com/');
             $this->get('/'.$app.'/login?source=bookmark')
@@ -25,6 +25,9 @@ class LegacyClientRedirectTest extends TestCase
 
     public function test_fallback_routes_respect_the_configured_client_url(): void
     {
+        config()->set('clients.web_url', 'https://pos.example.test/console/');
+        $this->get('/pos/login?source=old')
+            ->assertRedirect('https://pos.example.test/console/login?source=old');
         config()->set('clients.office_url', 'https://office.example.test/console/');
         $this->get('/office/login?source=old')
             ->assertRedirect('https://office.example.test/console/login?source=old');

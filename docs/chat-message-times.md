@@ -10,7 +10,7 @@ Migration `2026_10_28_000005_normalize_chat_message_times.php` repairs legacy me
 
 ## Deployment
 
-Use the same `APP_TIMEZONE` as the existing installation. Enter maintenance mode and pause/drain chat workers before replacing code and running this data migration, so old workers cannot continue writing the previous timestamp format during repair. Deploy Laravel source and rebuilt `public/app`, `public/mobile`, and `public/shop` assets together. From the Laravel directory:
+Use the same `APP_TIMEZONE` as the existing installation. Enter maintenance mode and pause/drain chat workers before replacing code and running this data migration, so old workers cannot continue writing the previous timestamp format during repair. Deploy Laravel source and rebuilt `public/pos`, `public/mobile`, and `public/shop` assets together. From the Laravel directory:
 
 ```sh
 php artisan migrate --force

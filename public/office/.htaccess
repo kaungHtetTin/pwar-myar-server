@@ -8,7 +8,7 @@ RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
 
 # Also cover existing directories that Apache serves without entering Laravel.
 RewriteCond %{HTTP_HOST} ^(?:www\.)?pwarmyar\.com(?::[0-9]+)?$ [NC]
-RewriteCond %{REQUEST_URI} ^/(?:public/)?app(?:/|$) [NC]
+RewriteCond %{REQUEST_URI} ^/(?:public/)?(?:app|pos)(?:/|$) [NC]
 RewriteRule ^(.*)$ https://pos.pwarmyar.com/$1 [R=302,L]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?pwarmyar\.com(?::[0-9]+)?$ [NC]
 RewriteCond %{REQUEST_URI} ^/(?:public/)?office(?:/|$) [NC]

@@ -22,7 +22,7 @@ Socket notification bursts are collapsed into a 150 ms refresh window. Ordinary 
 
 ## Deploy
 
-Deploy the Laravel source and rebuilt `public/app`, `public/mobile`, `public/shop`, and `public/office` directories together. No migration or new environment variable is required. From the deployed Laravel directory run:
+Deploy the Laravel source and rebuilt `public/pos`, `public/mobile`, `public/shop`, and `public/office` directories together. No migration or new environment variable is required. From the deployed Laravel directory run:
 
 ```sh
 php artisan optimize:clear

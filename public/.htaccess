@@ -10,7 +10,7 @@
 
     # Old owner-app addresses remain valid entry links to the subdomains.
     RewriteCond %{HTTP_HOST} ^(?:www\.)?pwarmyar\.com(?::[0-9]+)?$ [NC]
-    RewriteRule ^app(?:/(.*))?$ https://pos.pwarmyar.com/$1 [R=302,L]
+    RewriteRule ^(?:app|pos)(?:/(.*))?$ https://pos.pwarmyar.com/$1 [R=302,L]
     RewriteCond %{HTTP_HOST} ^(?:www\.)?pwarmyar\.com(?::[0-9]+)?$ [NC]
     RewriteRule ^mobile(?:/(.*))?$ https://mobilepos.pwarmyar.com/$1 [R=302,L]
     RewriteCond %{HTTP_HOST} ^(?:www\.)?pwarmyar\.com(?::[0-9]+)?$ [NC]
