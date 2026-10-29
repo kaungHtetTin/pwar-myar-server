@@ -166,7 +166,7 @@
                         <h3>Kaung Kaung</h3>
                         <p>Get clear PwarMyar guidance on Telegram, in English or Burmese.</p>
                         <ul><li>Plans, setup, downloads and device guidance.</li><li>Screenshot reading and troubleshooting.</li><li>Receipt guidance and unresolved error reports.</li></ul>
-                        <a class="ai-card-link" href="https://t.me/mkpos_help_bot" target="_blank" rel="noopener noreferrer">Chat with Kaung Kaung <span class="sr-only">on Telegram (opens in a new tab)</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+                        <a class="ai-card-link" href="https://t.me/pwarmyar_help_bot" target="_blank" rel="noopener noreferrer">Chat with Kaung Kaung <span class="sr-only">on Telegram (opens in a new tab)</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
                     </article>
                 </div>
                 <div class="ai-assurance"><svg aria-hidden="true"><use href="#icon-shield"/></svg><div><strong>You stay in control.</strong><p>Private business data is owner-only. Business changes and customer orders need confirmation; payments need manual review. Kaung Kaung provides public PwarMyar help without access to your business records.</p></div></div>
